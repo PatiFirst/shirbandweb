@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShirBand Shop</title>
+
+    <!-- Bootstrap5 Framework CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- ICON WEB -->
+    <link rel="shortcut icon" href="images/images.png" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5be7534a0b.js" crossorigin="anonymous"></script>
+
+    <!-- Feather Icon -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+
+    <link rel="stylesheet" href="CSS/custom.css">
+</head>
+
+<body>
+    <!-- Scroll up to top -->
+    <a href="#nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-arrow-up-square-fill scrolltop" viewBox="0 0 16 16" id="scroll-top">
+            <path
+                d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
+        </svg>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light alert-light shadow-sm" id="nav">
+        <div class="container">
+            <!-- Brand -->
+            <a href="#home" class="navbar-brand">
+                <img src="images/logo-1.png" alt="LOGO" class="navbar-logo">
+            </a>
+            <!-- Toggle Icon -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Menu -->
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ms-auto text-center mb-2 mb-lg-0 nav_bar">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#product" class="nav-link">Product</a>
+                    </li>
+
+                    <!-- Log in Zone -->
+                    <li class="nav-item mt-1 btn_loginnav">
+                        <button type="button" class="btn btn-sm btn_nav_login" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Log in</button>
+                    </li>
+
+                    <!-- Log out Zone -->
+                    <li class="nav-item ms-3 profile_nav">
+                        <p class="nav-link">Hello, <a href="#profileModal" data-bs-toggle="modal" class="fw-bold"
+                                id="profile-name"></a>
+                        </p>
+                    </li>
+                    <li class="nav-item cart_nav">
+                        <a class="nav-link me-3" data-bs-toggle="modal" href="#cartModal">
+                            <i class="fas fa-shopping-cart nav_icon">
+                                <span id="cart_n"></span>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="nav-item mt-1 btn_logoutnav">
+                        <a href="" class="btn btn-sm btn-danger" role="button" id="logout">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel Home -->
+    <section class="pt-5 bg-light" id="home">
+        <div class="container-fluid bg-light">
+            <div id="carouselHeader" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="images/1stwebbanner.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="images/webbanner1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="images/webbanner2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="images/webbanner3.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeader"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselHeader"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection -->
+    <section class="bg-light py-5 product">
+        <div class="container">
+            <h3 class="text-center">COLLECTIONS</h3>
+
+            <div class="row justify-content-center">
+                <div class="col-8 col-md-3 mx-2 my-3 rounded-3 collection_box">
+                    <img src="images/shirt/3-1.png" alt="" class="collection_shirt">
+                    <div class="my-0 collection_content">
+                        <p class="collection_sub">Fashion</p>
+                        <h1 class="collection_title">Shirts</h1>
+                    </div>
+                </div>
+                <div class="col-8 col-md-3 mx-2 my-3 rounded-3 collection_box">
+                    <img src="images/skirt/1.png" alt="" class="collection_skirt">
+                    <div class="my-0 collection_content">
+                        <p class="collection_sub">Fashion</p>
+                        <h1 class="collection_title">Skirts</h1>
+                    </div>
+                </div>
+                <div class="col-8 col-md-3 mx-2 my-3 rounded-3 collection_box">
+                    <img src="images/set/4-1.png" alt="" class="collection_set">
+                    <div class="my-0 collection_content">
+                        <p class="collection_sub">Women Clothing</p>
+                        <h1 class="collection_title">Sets</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product -->
+    <section class="bg-light p-5" id="product">
+        <div class="container">
+            <h1 class="text-center">Product</h1>
+            <ul class="nav nav-pills nav-fill justify-content-center my-4">
+                <li class="nav-item">
+                    <span class="nav-link product_item active" data-filter="all" aria-current="page">All</span>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link product_item" data-filter=".shirt">Shirt</span>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link product_item" data-filter=".skirt">Skirt</span>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link product_item" data-filter=".set">Clothing Set</span>
+                </li>
+            </ul>
+
+            <!-- All Product -->
+            <div class="container product_container">
+                <div class="row justify-content-around product_each">
+                
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-3 text-center">
+        <div class="container">
+            <div class="row justify-content-between align-items-start mb-5">
+                <!-- Logo -->
+                <div class="col-12 col-md-3">
+                    <img src="images/logo-2.png" class="foot_logo mb-2">
+                </div>
+
+                <!-- About Us -->
+                <div class="col-12 col-md-3">
+                    <h5 class="my-3 fw-bold">About Us</h5>
+                    <p>ร้านผลิตและจำหน่ายเสื้อผ้าแฟชั่น ราคาถูกที่สุดในสยามประเทศ</p>
+                </div>
+
+                <!-- Product Collection -->
+                <div class="col-12 col-md-3">
+                    <h5 class="my-3 fw-bold">Collections</h5>
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="" class="nav-link p-0 text-white" aria-current="page">Fashion Shirts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link p-0 text-white">Fashion Skirts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link p-0 text-white">Women Clothing Sets</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Follow Us -->
+                <div class="col-12 col-md-3">
+                    <h5 class="my-3">Follow Us</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="https://www.facebook.com/ShirBands-Clothes-1575069632767827"
+                                class="nav-link p-0 text-white " target="_blank" aria-current="page">Facebook</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://shopee.co.th/tanatchashirley?fbclid=IwAR0ZxcNOeVTNkeIYWjcnZ24zLQrCGzlEkdKJrd4h5ini105vRyuaiUbcVwY"
+                                target="_blank" class="nav-link p-0 text-white">Shoppee</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy; Copyright 2021 - Shirband</p>
+    </footer>
+
+    <!-- Modal for Log in -->
+    <div class="modal fade" id="loginModal" aria-hidden="true" aria-labelledby="loginModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog" id="modaldi-login">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalToggleLabel">Log in</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="login-form" action="index.html">
+                        <div class="form-floating mb-3">
+                            <input type="email" name="email" class="form-control" id="login-email"
+                                placeholder="test@example.com" required>
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" name="password" class="form-control" id="login-password"
+                                placeholder="Password" required>
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <p class="error text-danger text-center"></p>
+                        <div class="modal-footer">
+                            <a class="btn " data-bs-toggle="modal" data-bs-dismiss="modal" href="#regisModal"
+                                role="button">Register</a>
+                            <button type="submit" class="btn btn-success">Log in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Register -->
+    <div class="modal fade" id="regisModal" aria-hidden="true" aria-labelledby="regisModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="regisModalToggleLabel">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="regis-form">
+                        <div class="row mb-4">
+                            <label for="email" class="col-sm-2 col-form-label">Email*</label>
+                            <div class="col-sm-10">
+                                <input type="email" name="email" id="regis-email" class="form-control"
+                                    placeholder="test@example.com" required>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <label for="password" class="col-sm-2 col-form-label">Password*</label>
+                            <div class="col-sm-10">
+                                <input type="password" name="password" id="regis-password" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <label for="repassword" class="col-sm-2 col-form-label">Retype Password*</label>
+                            <div class="col-sm-10">
+                                <input type="password" name="repassword" id="regis-repassword" class="form-control" required>
+                            </div>
+                        </div>
+                        <hr>
+                        <h4 class="mb-4">Profile</h4>
+                        <div class="row g-2">
+                            <div class="col-12 col-sm-6">
+                                <label for="firstname" class="form-label">First name*</label>
+                                <input type="text" name="firstname" id="firstname" class="form-control" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <label for="lastname" class="form-label">Last name*</label>
+                                <input type="text" name="lastname" id="lastname" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="address" class="form-label">Address*</label>
+                                <input type="text" name="address" id="address" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="phone" class="form-label">Phone*</label>
+                                <input type="text" name="phone" id="phone" class="form-control" required>
+                            </div>
+                        </div>
+                        <p class="error text-danger text-center"></p>
+                        <div class="modal-footer">
+                            <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-dismiss="modal"
+                                href="#loginModal" role="button">Back</a>
+                            <button class="btn btn-success">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Profile -->
+    <div class="modal fade" id="profileModal" aria-hidden="true" aria-labelledby="profileModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="profileModalToggleLabel">Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- <form id="profile-form"> -->
+                        <div class="profile_modal">
+                            <p>First Name : <span id="prof-firstname"></span></p>
+                            <p>Last Name : <span id="prof-lastname"></span></p>
+                            <p>Address : <span id="prof-address"></span></p>
+                            <p>Phone : <span id="prof-phone"></span></p>
+                            <p>Email : <span id="prof-email"></span></p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Product Detail-->
+    <div class="modal fade" data-bs-keyboard="false" tabindex="-1" id="productModal">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row flex-column flex-md-row justify-content-center align-items-center prode-container">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Cart Total -->
+    <div class="modal fade" data-bs-backdrop="static" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body bg-light cart-container">
+                    <table class="table text-center mb-5">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartTable">
+                            
+                        </tbody>
+                    </table>
+
+                    <!-- Bill -->
+                    <form id="order-form" class="was-validated">
+                        <div class="row justify-content-end align-items-start mb-5">
+                            <div class="col-12 col-sm-6">
+                                <div class="row mb-2">
+                                    <div class="col-5">
+                                        <p>Subtotal:</p>
+                                    </div>
+                                    <div class="col-5">
+                                        <span id="cart-subtotal"></span>
+                                    </div>
+                                    <div class="col-1">
+                                        <p>&#3647</p>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-5">
+                                        <p>Shipping:</p>
+                                    </div>
+                                    <div class="col-5">
+                                        <span id="cart-shipping">Free</span>
+                                    </div>
+                                    <div class="col-1">
+                                        <p>&#3647</p>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <p>Total:</p>
+                                    </div>
+                                    <div class="col-5">
+                                        <span id="cart-total"></span>
+                                    </div>
+                                    <div class="col-1">
+                                        <span>&#3647</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-4">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <div class="form-group">
+                                            <label class="form-label">Choose your delivery option</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="sendDelivery"
+                                                    id="sendNormal" value="normal" required>
+                                                <label class="form-check-label" for="sendNormal">
+                                                    Normal
+                                                </label>
+                                            </div>
+                                            <div class="form-check" value="ems">
+                                                <input class="form-check-input" type="radio" name="sendDelivery"
+                                                    id="sendEms" required>
+                                                <label class="form-check-label" for="sendEms">
+                                                    EMS
+                                                </label>
+                                                <div class="invalid-feedback">Please select your delivery option</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="form-label">How do you want to Pay</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="HowPayment"
+                                                    id="payCredit" value="credit" required>
+                                                <label class="form-check-label">
+                                                    Credit
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="HowPayment"
+                                                    id="payEB" value="eBanking"required>
+                                                <label class="form-check-label">
+                                                    E-Banking
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="HowPayment"
+                                                    id="payCOD" value="cashOn" required>
+                                                <label class="form-check-label">
+                                                    Cash on delivery
+                                                </label>
+                                                <div class="invalid-feedback">Please select your Payment option</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-2 mt-md-0 p-4 bg_cart_address rounded-3">
+                                <div>
+                                    <h5 class="mb-3">Please check your profile</h5>
+                                    <p class="mb-2 fw-bold">Name: <span class="cart-prof" id="cart-firstname"></span> <span class="cart-prof" id="cart-lastname"></span>
+                                    </p>
+                                    <p class="mb-2 fw-bold">Address: <span class="cart-prof" id="cart-address"></span></p>
+                                    <p class="mb-2 fw-bold">Phone: <span class="cart-prof" id="cart-phone"></span>
+                                    </p>                                
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer mt-3">
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#cleanModal">Clean Order</button>
+                            <button type="button" class="btn btn-warning confirm_btn" data-bs-toggle="modal"
+                                data-bs-target="#confirmOrderModal">Confirm
+                                Order</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Confirm to Cart / Error / Already Confirm order-->
+    <div class="modal fade" data-bs-keyboard="false" tabindex="-1" id="confirmCartModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <modal class="modal-body">
+                    <p id="confirm-text"></p>
+                </modal>
+                <modal class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </modal>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Clean Order -->
+    <div class="modal fade" data-bs-keyboard="false" tabindex="-1" id="cleanModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <modal class="modal-body">
+                    <p>Do yo want to clean order?</p>
+                </modal>
+                <modal class="modal-footer CR-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger clean_btn">Clean</button>
+                </modal>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Ready to Confirm Order -->
+    <div class="modal fade" data-bs-keyboard="false" tabindex="1" id="confirmOrderModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <modal class="modal-body">
+                    <p id="cf-text">Confirm This Order?</p>
+                </modal>
+                <modal class="modal-footer CF-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-warning confirmOrder_btn">Confirm</button>
+                </modal>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Bootstrap5 Framework JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- MixItUp -->
+    <script src="JS/mixitup.min.js"></script>
+
+    <!-- Feater Icon -->
+    <script>
+        feather.replace()
+    </script>
+
+    <!-- AOS -->
+    <!-- <script>
+      AOS.init();
+  </script> -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyBMj7Ck05rOyy-pcDvwINtQnTetA1toQ4o",
+          authDomain: "projectwebshirband.firebaseapp.com",
+          projectId: "projectwebshirband",
+          storageBucket: "projectwebshirband.appspot.com",
+          messagingSenderId: "970978365352",
+          appId: "1:970978365352:web:98875e608885701de1979d",
+          measurementId: "G-0SWSZZ1K8L"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        //make auth and firestore reference
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // update firestore setting
+        db.settings({ timestampsInSnapshots: true });
+      </script>
+
+      <script src="JS/index.js"></script>
+      <script src="JS/auth.js"></script>
+</body>
+
+</html>

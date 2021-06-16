@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,p{
+    margin-bottom: 0px;
+}
+.hidden{
+    display: none;
+}
+
+.sidebar{
+    position: relative;
+    /* background-color: #f8bdaf; */
+    /* height: 100vh; */
+}
+.sidebar .nav-link{
+    color: #59433d;
+}
+.sidebar .nav-link.active{
+    background-color: #59433d;
+    color: white;
+    border-radius: 10px;
+}
+.sidebar .profile_content{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.sidebar .btn-logout{
+    color: white;
+    background-color: #976458;
+}
+.sidebar #admin_name{
+    font-size: 24px;
+    color: #59433d;
+    font-weight: 600;
+}
+
+/* ==== Main ==== */
+.product h1{
+    font-size: 48px;
+}
+#product-img{
+    width: 100px;
+}
+
+#order-img{
+    width: 100px;
+}
+#order-delivery, #order-payment{
+    color: #EE6C87;
+}
+#order-completed{
+    color: gray;
+    font-style: italic;
+}
+
+/* ==== Edit ==== */
+.edit_img{
+    width: 10%;
+}
+
+.ex-img{
+    width: 100px;
+}
+
+@media screen and (max-width: 767px){
+    .sidebar .nav-link span{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 426px){
+    /* .sidebar{
+        height: 100vh;
+    } */
+    .sidebar .nav-link i{
+        font-size: 100px;
+    }
+    .sidebar #admin_name{
+        font-size: 16px;
+    }
+    .sidebar button{
+        font-size: 12px;
+    }
+    .sidebar .con-sidebar .nav .nav-item .nav-link .nav-icon{
+        /* width: 600px; */
+        font-size: 600px;
+    }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SHIRBANDS</title>
+		<!-- ICON WEB -->
+		<link rel="shortcut icon" href="images/logo-1.png" type="image/x-icon">
+
+		<link rel="stylesheet" href="CSS/stylelanding.css" />
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	</head>
+	<body>		
+			<div class="wrapper">
+				<div class="box">
+				
+				</div>
+			
+					<img src="images/landingimg.png" alt="">
+				</div>
+			
+			<div class="circle-shape">
+				<span></span>
+				</div>
+			<div class="circle-shape-1"></div>
+			<div class="circle-shape-2"></div>
+			<div class="circle-shape-3"></div>
+			<div class="circle-shape-4"></div>
+
+				<div class="blocks">
+					<div class="block-1 block">S</div>
+					<div class="block-2 block">H</div>
+					<div class="block-3 block">I</div>
+					<div class="block-4 block">R</div>
+					<div class="block-5 block">BAND</div>
+				</div>
+				<a href="https://projectwebshirband.web.app/home.html">SHOP NOW</a>
+			<script type="text/javascript">
+				const Buttons = document.querySelectorAll('a');
+				Buttons.forEach(btn => {
+					let x = e.clientX - e.target.offsetLetf;
+					let y = e.clientY - e.target.offsetTop;
+					let ripples = document.createElement('span');
+					ripples.style.left = x + 'px';
+					ripples.style.top = y + 'px';
+					this.appendChild(ripples);
+
+					setTimeout(()=>{
+						ripples.remove()
+					},1000);
+					
+				})
+				
+			</script>
+		<script>
+
+			TweenMax.from("a", 10, {
+				scale: "0",
+				ease: Expo.easeInOut,
+			});
+
+			TweenMax.to(".box", 3.3, {
+				y: "-100%",
+				ease: Expo.easeInOut,
+			});
+
+			TweenMax.to(".circle-shape-1", 3, {
+				opacity: 0,
+				scale: "5",
+				ease: Expo.easeInOut,
+				
+			});
+			
+			
+
+			TweenMax.from(".circle-shape-2", 2.4, {
+				scale: "0",
+				ease: Expo.easeInOut,
+				
+			});
+			
+			TweenMax.from(".circle-shape-3", 2.4, {
+				scale: "0",
+				ease: Expo.easeInOut,
+			});
+
+			TweenMax.from(".circle-shape-4", 2.4, {
+				scale: "0",
+				ease: Expo.easeInOut,
+			});
+			
+			TweenMax.staggerFrom(
+				".menu > div",
+				1,
+				{
+					opacity: 0,
+					y: 60,
+					ease: Power2.easeOut,
+				},
+				0.2
+			);
+			
+			var tween = TweenMax.to(".block-1",5,{
+				x: "-180",
+				y: "-100",
+				scale: "2.4",
+				ease: Expo.easeInOut,
+			});
+			
+			setTimeout(function(){
+				tween.resume()
+			}, 1000);
+			
+			setTimeout(function(){
+				tween.reverse()
+			}, 5000);
+			
+			var tween1 = TweenMax.to(".block-2",5,{
+				x: "-180",
+				y: "200",
+				scale: "1.2",
+				ease: Expo.easeInOut,
+			});
+			
+			setTimeout(function(){
+				tween1.resume()
+			}, 1000);
+			
+			setTimeout(function(){
+				tween1.reverse()
+			}, 5000);
+
+			var tween2 = TweenMax.to(".block-3", 5, {
+				x: "220",
+				y: "-255",
+				scale: "1.2",
+				ease: Expo.easeInOut,
+			});
+			setTimeout(function(){
+				tween2.resume()
+			}, 1000);
+			
+			setTimeout(function(){
+				tween2.reverse()
+			}, 5000);
+
+			var tween3 = TweenMax.to(".block-4", 5, {
+				x: "300",
+				y: "240",
+				scale: "1",
+				ease: Expo.easeInOut,
+			});
+			setTimeout(function(){
+				tween3.resume()
+			}, 1000);
+			
+			setTimeout(function(){
+				tween3.reverse()
+			}, 5000);
+
+			var tween4 = TweenMax.to(".block-5", 6, {
+				x: "300",
+				y: "240",
+				scale: "1",
+				ease: Expo.easeInOut,
+			});
+			
+			setTimeout(function(){
+				tween4.resume()
+			}, 1000);
+			
+			setTimeout(function(){
+				tween4.reverse()
+			}, 5000);
+
+		</script>
+	</body>
+</html>

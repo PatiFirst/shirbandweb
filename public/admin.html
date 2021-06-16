@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShirBand Admin</title>
+    <!-- Bootstrap5 Framework CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <!-- ICON WEB -->
+    <link rel="shortcut icon" href="images/logo-1.png" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5be7534a0b.js" crossorigin="anonymous"></script>
+
+    <!-- Feather Icon -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <link rel="stylesheet" href="CSS/admin.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar Nav -->
+            <nav id="sidebar" class="col-3 col-md-4 col-lg-3 d-md-block sidebar">
+                <div class="position-sticky con-sidebar">
+                    <img src="images/logo-2.png" alt="" class="navbar-brand w-100">
+                    <hr>
+                    <!-- <h5 class="fw-bold mb-3">MANAGER</h5> -->
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-3">
+                            <a href="" class="nav-link product_btn">
+                                <i class="nav-icon" data-feather="shopping-cart"></i>
+                                <span class="ms-2 fw-bold">Products</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" class="nav-link order_btn">
+                                <i class="nav-icon" data-feather="file"></i>
+                                <span class="ms-2 fw-bold">Orders</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class="d-flex flex-wrap justify-content-around align-items-center mt-5">
+                        <p id="admin_name">Welcome Admin</p>
+                        <button type="button" class="btn btn-logout">Log out</button>
+                    </div>
+
+                </div>
+            </nav>
+
+            <!-- Main -->
+            <main class="col-9 col-md-8 ms-sm-auto col-lg-9 px-md-4 p-4 main">
+
+                <!-- Content -->
+                
+
+
+            </main>
+        </div>
+    </div>
+
+
+
+    <!-- Modal for Add Product -->
+    <div class="modal fade" id="addProductModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="addproductForm" name="addForm">
+                        <div class="form-group mb-3">
+                            <label for="form-label" class="mb-1">Collection</label>
+                            <select id="addCollection" class="form-select" required>
+                                <option selected disabled value="">Collection</option>
+                                <option value="shirt">Shirt</option>
+                                <option value="skirt">Skirt</option>
+                                <option value="set">Clothing Set</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="addproduct-name" class="mb-1">Product Name</label>
+                            <input type="text" name="addproduct-name" id="addproduct-name" class="form-control"
+                                placeholder="Product Name" required>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <label for="addproduct-detail" class="mb-1S">Product Detail</label>
+                            <textarea type="text" name="addproduct-detail" id="addproduct-detail" class="form-control"
+                                placeholder="Product Name" rows="3" required></textarea>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="addproduct-size" class="form-label me-3">Size :</label>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="addProductSize" type="checkbox" class="addproduct-size" value="S">
+                                <label class="form-check-label" for="addproduct-size">S</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="addProductSize" type="checkbox" class="addproduct-size" value="M">
+                                <label class="form-check-label" for="addproduct-size">M</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="addProductSize" type="checkbox" class="addproduct-size" value="L">
+                                <label class="form-check-label" for="addproduct-size">L</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="addProductSize" type="checkbox" class="addproduct-size" value="XL">
+                                <label class="form-check-label" for="addproduct-size">XL</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="addProductSize" type="checkbox" class="addproduct-size" value="XXL">
+                                <label class="form-check-label" for="addproduct-size">XXL</label>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="addproduct-color" class="form-label">Color :</label>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="addproductColor" type="checkbox" id="addproduct-color" value="red">
+                                <label class="form-check-label" for="addproduct-color">Red</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="addproductColor" type="checkbox" id="addproduct-color" value="blue">
+                                <label class="form-check-label" for="addproduct-color">Blue</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="addproductColor" type="checkbox" id="addproduct-color" value="yellow">
+                                <label class="form-check-label" for="addproduct-color">Yellow</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="addproductColor" type="checkbox" id="addproduct-color" value="white">
+                                <label class="form-check-label" for="addproduct-color">White</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="addproductColor" type="checkbox" id="addproduct-color" value="pink">
+                                <label class="form-check-label" for="addproduct-color">Pink</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="addproductColor" type="checkbox" id="addproduct-color" value="black">
+                                <label class="form-check-label" for="addproduct-color">Black</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="addproduct-stock" class="form-label">Stock :</label>
+                            <input type="number" name="addproduct-stock" id="addproduct-stock" class="form-control"
+                                min="1" required>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <label for="addproduct-img" class="form-label">Product Image :</label>
+                            <input class="form-control" type="file" id="addproduct-img" aria-describedby="addimgHelp">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="addproduct-price" class="form-label">Price :</label>
+                            <input type="number" name="addproduct-price" id="addproduct-price" class="form-control"
+                                min="1" required>
+                        </div>
+
+                        <div class="modal-footer mt-3">
+                            <input type="submit" class="btn btn-success" id="addProductBtn" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Profile -->
+    <div class="modal fade" id="profileModal" aria-hidden="true" aria-labelledby="profileModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="profileModalToggleLabel">Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p class="mb-3">Name : <span id="proname"></span></p>
+                    <p class="mb-3">Address : <span id="address"></span></p>
+                    <p class="mb-3">Phone : <span id="phone"></span></p>
+                    <p>Email : <span id="email"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Order -->
+    <div class="modal fade" id="orderModal" aria-hidden="true" aria-labelledby="orderModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalToggleLabel">Order</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <table class="table table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Size</th>
+                                <th scope="col">Color</th>
+                                <th scope="col">Amount</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="myBody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Bootstrap5 Framework JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Feater Icon -->
+    <script>
+        feather.replace()
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyBMj7Ck05rOyy-pcDvwINtQnTetA1toQ4o",
+          authDomain: "projectwebshirband.firebaseapp.com",
+          projectId: "projectwebshirband",
+          storageBucket: "projectwebshirband.appspot.com",
+          messagingSenderId: "970978365352",
+          appId: "1:970978365352:web:98875e608885701de1979d",
+          measurementId: "G-0SWSZZ1K8L"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        //make auth and firestore reference
+        const db = firebase.firestore();
+
+        // update firestore setting
+        db.settings({ timestampsInSnapshots: true });
+      </script>
+
+    <script src="JS/admin.js"></script>
+    <script src="JS/authAdmin.js"></script>
+</body>
+
+</html>

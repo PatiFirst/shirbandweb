@@ -1,0 +1,58 @@
+<tr id="${productId}">
+                <th scope="row">${index+1}</th>
+                <td>
+                    <div class="row justify-content-around d-flex flex-wrap" >
+                        <div class="col-12 col-lg-3">
+                            <img src="${product.productImg[0]}" id="product-img">
+                        </div>
+                        <div class="col-12 col-lg-5 text-center text-lg-start ">
+                            <p class="my-2" id="product-name">${product.productName}</p>
+                            <p class="my-2" id="product-size">
+                                Size :
+                                <span>${product.productSize}</span>
+                            </p>
+                            <p class="my-2" >
+                                Color :
+                                <span id="product-color">${product.productColor} </span>
+                            </p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <span id="product-price">${product.price}</span> &#3647;
+                </td>
+                <td>
+                    <p id="product-status">In stock: ${product.productStock}</p>
+                </td>
+                <td>
+                    <p role="button" class="btn btn-sm btn-danger removeProduct">X</p>
+
+                </td>
+            </tr>
+
+
+
+
+            <div id="product" class="product">
+        <div class="d-flex flex-wrap justify-content-end align-items-center my-5 me-3">
+            <h1 class="fw-bold me-3">Product</h1>
+            <a href="#addProductModal" role="button" class="btn btn-success" data-bs-toggle="modal">Add
+                Product</a>
+        </div>
+
+        <table class="table table-hover text-center">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Remove</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+
+            </tbody>
+
+        </table>
+    </div>
